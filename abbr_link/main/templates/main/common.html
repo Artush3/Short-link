@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <p>Short/link</p>
+            <ul>
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'we' %}">Про нас</a></li>
+                    <li><a href="{% url 'reg' %}">Регистрация</a></li>
+                    <li><a href="{% url 'login' %}">Войти</a></li>
+                {% else %}
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'we' %}">Про нас</a></li>
+                    <li><a href="{% url 'profil' %}">Профиль</a></li>
+                    <li><a href="{% url 'link' %}">Ссылки</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </header>
+    {% block main %}
+    {% endblock %}
+    <footer>
+        <div class="footer">
+            <p>Все права защищены Ⓒ</p>
+        </div>
+    </footer>
+</body>
+</html>

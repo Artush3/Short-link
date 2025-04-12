@@ -1,0 +1,28 @@
+{% extends "main/common.html" %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="main">
+            <h1>Создание ссылок</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Создать</button>
+                {% if link %}
+                    <h2>Доступные ссылки</h2>
+                    {% for i in link %}
+                        {% if i.author == user %}
+                            <ul>
+                                <p>Ссылка - <a href="{{ i.link }}">/link/{{ i.min_link }}/</a></p>
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </main>
+{% endblock %}

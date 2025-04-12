@@ -1,0 +1,14 @@
+{% extends "main/common.html" %}
+
+{% block title %}
+    Выход
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="main">
+            <h2>Вы вышли из учетной записи!</h2>
+            <a href="{% url 'login' %}">Войти снова!</a>
+        </div>
+    </main>
+{% endblock %}

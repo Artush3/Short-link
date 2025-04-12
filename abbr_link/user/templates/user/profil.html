@@ -1,0 +1,27 @@
+{% extends "main/common.html" %}
+
+{% block title %}
+    Личный Кабинет
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="main">
+            <h2>Личный Кабинет</h2>
+            <p><span><b>@</b></span>{{ user.username }}</p>
+            {% if user.email %}
+                <p><b><span>Email:</span></b> {{ user.email }}</p>
+            {% endif %}
+            <form action="{% url 'exit' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Выйти из кабинета!</button>
+            </form>
+            <h1>Изменить данные</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Обновить</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

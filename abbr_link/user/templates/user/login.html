@@ -1,0 +1,18 @@
+{% extends "main/common.html" %}
+
+{% block title %}
+    Авторизация
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="main">
+            <h1>Авторизация</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button>Войти</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

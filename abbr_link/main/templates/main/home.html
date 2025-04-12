@@ -1,0 +1,15 @@
+{% extends "main/common.html" %}
+
+{% block title %}
+    Главная
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="main">
+            <h1>Сервис — <span>Short/link</span></h1>
+            <p>Сократим длинную ссылку!</p>
+            <a href="{% url "profil" %}"><button>Кабинет пользователя</button></a>
+        </div>
+    </main>
+{% endblock %}

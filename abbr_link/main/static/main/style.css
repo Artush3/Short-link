@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a1d;
+    border-bottom: 2px solid #66fcf1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.header p {
+    font-size: 40px;
+    color: #c3073f;
+    transition: transform 500ms ease-in-out;
+}
+
+.header p:hover {
+    transform: scale(1.1);
+}
+
+.header ul {
+    list-style: none;
+}
+
+.header a {
+    transition: color 500ms ease-in-out;
+    text-decoration: none;
+    color: #66fcf1;
+}
+
+.header a:hover {
+    color: #45a29e;
+}
+
+.header ul > li {
+    margin-left: 25px;
+    display: inline-block;
+}
+
+footer {
+    background-color: #1a1a1d;
+    border-top: 2px solid #66fcf1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.footer p {
+    font-size: 20px;
+    color: #c3073f;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 1000px;
+    background-color: #eae7dc;
+}
+
+.main {
+    margin: 50px;
+    text-align: center;
+}
+
+.main a {
+    color: #c3073f;
+}
+
+.main span {
+    color: #c3073f;
+}
+
+.main h1 {
+    font-size: 50px;
+}
+
+.main h2 {
+    margin-top: 20px;
+}
+
+.main p {
+    font-size: 25px;
+}
+
+.main button {
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 1.5px solid black;
+    width: 180px;
+    height: 30px;
+    color: white;
+    background-color: #c3073f;
+    transition: background-color 500ms, color 500ms, transform 500ms;
+}
+
+.main button:hover {
+    transform: scale(1.1);
+    color: rgb(205, 205, 205);
+    background-color: #7f0026;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    border: 2px solid #7f0026;
+    border-radius: 10px;
+}
+
+label {
+    width: 100%;
+    font-weight: bold;
+}
+
+ul.errorlist {
+    color: red;
+    list-style: none;
+}
+
+div.helptext {
+    color: #717171;
+}
+
+div.helptext ul {
+    list-style: none;
+}
