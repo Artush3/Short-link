@@ -19,10 +19,15 @@ Short/link — это простой и удобный сервис для со�
  
 2. Установите зависимости:  
   
-   pip install -r requirements.txt  
+   pip install -r requirements.txt
+
+
+3. Проведите миграции
+
+   python manage.py migrate
     
  
-3. Запустите сервер:  
+5. Запустите сервер:  
   
    python manage.py runserver  
     
